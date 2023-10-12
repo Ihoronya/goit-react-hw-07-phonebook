@@ -7,7 +7,10 @@ const getALLContacts = createAsyncThunk(
     try {
       return await contactsApi.fetchContacts();
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue({
+        message: 'Помилка при отриманні контактів',
+        error,
+      });
     }
   }
 );
@@ -18,7 +21,10 @@ const addContact = createAsyncThunk(
     try {
       return await contactsApi.fetchAddContact(payload);
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue({
+        message: 'Помилка при отриманні контактів',
+        error,
+      });
     }
   }
 );
@@ -29,7 +35,10 @@ const deleteContact = createAsyncThunk(
     try {
       return await contactsApi.fetchDeleteContact(id);
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue({
+        message: 'Помилка при отриманні контактів',
+        error,
+      });
     }
   }
 );

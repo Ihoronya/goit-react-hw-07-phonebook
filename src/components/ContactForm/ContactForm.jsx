@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import contactsOperations from '../../redux/operations/contactsOperations';
-import { getContacts } from '../../redux/selectors/contactsSelectors';
+import contactsOperations from '../../redux/contacts/contactsOperations';
+import { getContacts } from '../../redux/contacts/contactsSelectors';
 import s from './ContactForm.module.css';
 import { toast } from 'react-toastify';
 import * as Yup from 'yup';
